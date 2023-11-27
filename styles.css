@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: pink;
+  color: black;
+  padding: 10px 0;
+  text-align: center; /* テキストを中央揃えにするため */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 要素を中央に配置するため */
+  padding: 0 20px;
+}
+
+.dropdown {
+  position: relative; /* .dropdown を相対配置に設定 */
+}
+
+/* ドロップダウンメニュー */
+.dropdown-content {
+  display: none;
+  position: absolute; /* 相対配置に基づいて絶対位置指定 */
+  background-color: pink;
+  z-index: 1;
+  top: 100%; /* .dropdown の下に表示されるように設定 */
+  left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  width: 154px;
+  padding: unset;
+}
+
+.dropdown-content li {
+  display: block;
+  writing-mode: horizontal-tb; 
+}
+
+.dropdown-content li a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* ドロップダウンの位置調整 */
+.dropdown-content {
+  top: 100%;
+  left: -20px;
+}
+
+/* ナビゲーションメニューのスタイル */
+
+/* ナビゲーション全体 */
+.navigation {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* メニュー項目 */
+.navigation ul {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+}
+
+/* メインメニューリンク */
+.navigation ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.main {
+  width: auto;
+  height: auto;
+}
+
+.background-image {
+  background-image: url('3_kantou4__saitama.png');
+  /* 以下は背景画像の設定に関するプロパティ */
+  background-size: 500px; /* 背景画像を要素に合わせてカバーするように調整 */
+  background-position: center; /* 背景画像を要素の中央に配置 */
+  background-repeat: no-repeat; /* 画像を繰り返し表示しないように設定 */
+  margin-top: -50px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 300px;
+}
+
+.name1 {
+  font-size: 10px;
+  color: white;
+}
+
+.name {
+  text-align: center;
+  padding: 65px;
+}
+
+.image-held {
+  text-align: center;
+  width: auto;
+  height: 200px;
+}
+
+.image {
+  text-align: center;
+  width: auto;
+  height: 250px;
+}
+
+.product-name {
+  text-align: center;
+  width: auto;
+  height: 100px;
+}
+
+.product-name1 {
+  color: pink;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
+}
+
+.package {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 画像のサイズを調整する */
+.package img {
+  max-width: 100%;
+  height: 300px;
+  display: block; /* 余白を除去するために追加 */
+  margin: 0 auto; /* 中央寄せするために追加 */
+}
+
+.target {
+  margin-top: 250px;
+}
+
+.product-name {
+  text-align: center;
+  width: auto;
+  height: 300px;
+}
+
+.overview {
+  text-align: center;
+  width: auto;
+}
+
+.footer-content {
+  margin-top: 10px;
+  background-color: pink;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width:768px) {
+  .background-image {
+    margin-top: -65px;
+  }
+  .dropdown:hover .dropdown-content {
+    width: 348px;
+  }
+}
